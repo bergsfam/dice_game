@@ -1,0 +1,9 @@
+[project]
+name = "dicegame"
+version = "0.1.0"
+description = "Dice game engine and CLI simulator"
+requires-python = ">=3.11"
+optional-dependencies = { dev = ["pytest"] }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
