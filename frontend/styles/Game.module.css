@@ -1,0 +1,155 @@
+.container {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.headerCard {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e1d5c1;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 14px 24px rgba(32, 26, 18, 0.08);
+}
+
+.headerTitle {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
+
+.headerMeta {
+  margin: 0;
+  color: #5b4f40;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rollButton {
+  background: #1e1b16;
+  color: #f8f4ee;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.rollButton[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+
+.players {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.playerCard {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e1d5c1;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.playerName {
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+
+.playerMeta {
+  margin: 0 0 12px;
+  color: #5b4f40;
+}
+
+.bankButton {
+  background: #f1d9b2;
+  border: 1px solid #b68a43;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bankButton[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.logPanel {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e1d5c1;
+  border-radius: 16px;
+  padding: 16px;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.logTitle {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.logItem {
+  border-bottom: 1px solid #efe5d3;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #5b4f40;
+}
+
+.error {
+  margin-top: 12px;
+  color: #9a2c2c;
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 27, 22, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal {
+  background: #fff8ed;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 520px;
+  width: 100%;
+  border: 1px solid #e1d5c1;
+}
+
+.modalTitle {
+  margin: 0 0 12px;
+}
+
+.modalList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.modalList li {
+  margin-bottom: 6px;
+}

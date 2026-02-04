@@ -26,3 +26,34 @@ Strategies:
 - `threshold:T` bank when `round_score >= T`
 - `greedy` bank only at a very high score (effectively never)
 - `roll_limit:k` bank once `rolls_elapsed_in_round >= k`
+
+## Web UI (FastAPI + Next.js)
+
+This repo now includes a scaffolded single-screen web UI designed to grow into multi-client play later.
+
+### Backend
+
+```bash
+uvicorn backend.main:app --reload --port 8000
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Then open `http://localhost:3000`.
+
+To point the UI at a different backend URL, set `NEXT_PUBLIC_API_BASE` (see `frontend/.env.local.example`).
+
+### Notes
+
+- The backend exposes an append-only event log with `since_seq` polling support.
+- In-memory game storage is isolated behind a `GameStore` interface so it can be swapped for Redis/Postgres later.
+- `POST /api/games/{game_id}/reset` resets the existing game in-place using the same player list.
+
+<!-- Sample screenshot: Create game screen with player list and start button. -->
+<!-- Sample screenshot: Game screen with player cards, roll/bank buttons, and event log. -->
